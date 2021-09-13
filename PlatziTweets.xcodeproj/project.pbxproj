@@ -3,27 +3,44 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		CB958A8926ED4D1400BD71EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB958A8826ED4D1400BD71EF /* AppDelegate.swift */; };
 		CB958A8B26ED4D1400BD71EF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB958A8A26ED4D1400BD71EF /* SceneDelegate.swift */; };
-		CB958A8D26ED4D1400BD71EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB958A8C26ED4D1400BD71EF /* ViewController.swift */; };
 		CB958A9026ED4D1400BD71EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB958A8E26ED4D1400BD71EF /* Main.storyboard */; };
 		CB958A9226ED4D1500BD71EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB958A9126ED4D1500BD71EF /* Assets.xcassets */; };
 		CB958A9526ED4D1500BD71EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB958A9326ED4D1500BD71EF /* LaunchScreen.storyboard */; };
+		CB958AA126ED4D8400BD71EF /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB958AA026ED4D8400BD71EF /* SplashViewController.swift */; };
+		CB958AA526ED4DC400BD71EF /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CB958AA426ED4DC400BD71EF /* RxSwift */; };
+		CB958AA726ED4DC400BD71EF /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = CB958AA626ED4DC400BD71EF /* RxCocoa */; };
+		CB958AA926ED4DC400BD71EF /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = CB958AA826ED4DC400BD71EF /* RxRelay */; };
+		CB958AAD26ED4DD900BD71EF /* PureLayout in Frameworks */ = {isa = PBXBuildFile; productRef = CB958AAC26ED4DD900BD71EF /* PureLayout */; };
+		CB958AB126EEC29400BD71EF /* SplashCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB958AB026EEC29400BD71EF /* SplashCoordinator.swift */; };
+		CB958AB526EEC37400BD71EF /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB958AB426EEC37400BD71EF /* LoginView.swift */; };
+		CB958AB826EEC47200BD71EF /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB958AB726EEC47200BD71EF /* SignupView.swift */; };
+		CB958ABB26EEC52900BD71EF /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB958ABA26EEC52900BD71EF /* SplashView.swift */; };
+		CB958ABE26EEC7EA00BD71EF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB958ABD26EEC7EA00BD71EF /* LoginViewController.swift */; };
+		CB958AC126EEC7FD00BD71EF /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB958AC026EEC7FD00BD71EF /* SignupViewController.swift */; };
+		CB958AC626EECBCD00BD71EF /* NotificationBannerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CB958AC526EECBCD00BD71EF /* NotificationBannerSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CB958A8526ED4D1400BD71EF /* PlatziTweets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlatziTweets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB958A8826ED4D1400BD71EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB958A8A26ED4D1400BD71EF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CB958A8C26ED4D1400BD71EF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CB958A8F26ED4D1400BD71EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CB958A9126ED4D1500BD71EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB958A9426ED4D1500BD71EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CB958A9626ED4D1500BD71EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB958AA026ED4D8400BD71EF /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		CB958AB026EEC29400BD71EF /* SplashCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashCoordinator.swift; sourceTree = "<group>"; };
+		CB958AB426EEC37400BD71EF /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		CB958AB726EEC47200BD71EF /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
+		CB958ABA26EEC52900BD71EF /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		CB958ABD26EEC7EA00BD71EF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		CB958AC026EEC7FD00BD71EF /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +48,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB958AAD26ED4DD900BD71EF /* PureLayout in Frameworks */,
+				CB958AA926ED4DC400BD71EF /* RxRelay in Frameworks */,
+				CB958AA726ED4DC400BD71EF /* RxCocoa in Frameworks */,
+				CB958AC626EECBCD00BD71EF /* NotificationBannerSwift in Frameworks */,
+				CB958AA526ED4DC400BD71EF /* RxSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +78,45 @@
 		CB958A8726ED4D1400BD71EF /* PlatziTweets */ = {
 			isa = PBXGroup;
 			children = (
+				CB958A9D26ED4D5400BD71EF /* Application */,
+				CB958A9E26ED4D5900BD71EF /* View */,
+				CB958A9F26ED4D6100BD71EF /* ViewModel */,
 				CB958A8826ED4D1400BD71EF /* AppDelegate.swift */,
 				CB958A8A26ED4D1400BD71EF /* SceneDelegate.swift */,
-				CB958A8C26ED4D1400BD71EF /* ViewController.swift */,
 				CB958A8E26ED4D1400BD71EF /* Main.storyboard */,
 				CB958A9126ED4D1500BD71EF /* Assets.xcassets */,
 				CB958A9326ED4D1500BD71EF /* LaunchScreen.storyboard */,
 				CB958A9626ED4D1500BD71EF /* Info.plist */,
 			);
 			path = PlatziTweets;
+			sourceTree = "<group>";
+		};
+		CB958A9D26ED4D5400BD71EF /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				CB958AB026EEC29400BD71EF /* SplashCoordinator.swift */,
+				CB958AA026ED4D8400BD71EF /* SplashViewController.swift */,
+				CB958ABD26EEC7EA00BD71EF /* LoginViewController.swift */,
+				CB958AC026EEC7FD00BD71EF /* SignupViewController.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		CB958A9E26ED4D5900BD71EF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CB958AB426EEC37400BD71EF /* LoginView.swift */,
+				CB958AB726EEC47200BD71EF /* SignupView.swift */,
+				CB958ABA26EEC52900BD71EF /* SplashView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CB958A9F26ED4D6100BD71EF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +135,13 @@
 			dependencies = (
 			);
 			name = PlatziTweets;
+			packageProductDependencies = (
+				CB958AA426ED4DC400BD71EF /* RxSwift */,
+				CB958AA626ED4DC400BD71EF /* RxCocoa */,
+				CB958AA826ED4DC400BD71EF /* RxRelay */,
+				CB958AAC26ED4DD900BD71EF /* PureLayout */,
+				CB958AC526EECBCD00BD71EF /* NotificationBannerSwift */,
+			);
 			productName = PlatziTweets;
 			productReference = CB958A8526ED4D1400BD71EF /* PlatziTweets.app */;
 			productType = "com.apple.product-type.application";
@@ -110,6 +169,11 @@
 				Base,
 			);
 			mainGroup = CB958A7C26ED4D1400BD71EF;
+			packageReferences = (
+				CB958AA326ED4DC400BD71EF /* XCRemoteSwiftPackageReference "RxSwift" */,
+				CB958AAB26ED4DD900BD71EF /* XCRemoteSwiftPackageReference "PureLayout" */,
+				CB958AC426EECBCD00BD71EF /* XCRemoteSwiftPackageReference "NotificationBanner" */,
+			);
 			productRefGroup = CB958A8626ED4D1400BD71EF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,9 +201,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB958A8D26ED4D1400BD71EF /* ViewController.swift in Sources */,
+				CB958AC126EEC7FD00BD71EF /* SignupViewController.swift in Sources */,
+				CB958AB826EEC47200BD71EF /* SignupView.swift in Sources */,
+				CB958AA126ED4D8400BD71EF /* SplashViewController.swift in Sources */,
+				CB958AB126EEC29400BD71EF /* SplashCoordinator.swift in Sources */,
 				CB958A8926ED4D1400BD71EF /* AppDelegate.swift in Sources */,
+				CB958ABE26EEC7EA00BD71EF /* LoginViewController.swift in Sources */,
+				CB958AB526EEC37400BD71EF /* LoginView.swift in Sources */,
 				CB958A8B26ED4D1400BD71EF /* SceneDelegate.swift in Sources */,
+				CB958ABB26EEC52900BD71EF /* SplashView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +358,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = PlatziTweets/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -295,7 +366,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.pankecho.PlatziTweets;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -306,6 +377,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = PlatziTweets/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -313,7 +385,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.pankecho.PlatziTweets;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -339,6 +411,61 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CB958AA326ED4DC400BD71EF /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.2.0;
+			};
+		};
+		CB958AAB26ED4DD900BD71EF /* XCRemoteSwiftPackageReference "PureLayout" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/PureLayout/PureLayout";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.9;
+			};
+		};
+		CB958AC426EECBCD00BD71EF /* XCRemoteSwiftPackageReference "NotificationBanner" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Daltron/NotificationBanner";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.6;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CB958AA426ED4DC400BD71EF /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CB958AA326ED4DC400BD71EF /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		CB958AA626ED4DC400BD71EF /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CB958AA326ED4DC400BD71EF /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		CB958AA826ED4DC400BD71EF /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CB958AA326ED4DC400BD71EF /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		CB958AAC26ED4DD900BD71EF /* PureLayout */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CB958AAB26ED4DD900BD71EF /* XCRemoteSwiftPackageReference "PureLayout" */;
+			productName = PureLayout;
+		};
+		CB958AC526EECBCD00BD71EF /* NotificationBannerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CB958AC426EECBCD00BD71EF /* XCRemoteSwiftPackageReference "NotificationBanner" */;
+			productName = NotificationBannerSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CB958A7D26ED4D1400BD71EF /* Project object */;
 }

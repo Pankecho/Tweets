@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  PlatziTweets
-//
-//  Created by Juan Pablo Martinez Ruiz on 11/09/21.
-//
-
 import UIKit
 
 @main
