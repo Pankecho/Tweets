@@ -24,6 +24,12 @@
 		CB958ABE26EEC7EA00BD71EF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB958ABD26EEC7EA00BD71EF /* LoginViewController.swift */; };
 		CB958AC126EEC7FD00BD71EF /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB958AC026EEC7FD00BD71EF /* SignupViewController.swift */; };
 		CB958AC626EECBCD00BD71EF /* NotificationBannerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CB958AC526EECBCD00BD71EF /* NotificationBannerSwift */; };
+		CB958AD326EECF2300BD71EF /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB958AD226EECF2300BD71EF /* Service.swift */; };
+		CB958AD826EECF7200BD71EF /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB958AD726EECF7200BD71EF /* Login.swift */; };
+		CB958ADB26EECFB800BD71EF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB958ADA26EECFB800BD71EF /* User.swift */; };
+		CB958ADE26EECFE700BD71EF /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB958ADD26EECFE700BD71EF /* Error.swift */; };
+		CB958AE126EED04E00BD71EF /* Signup.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB958AE026EED04E00BD71EF /* Signup.swift */; };
+		CB958AE426EED0C000BD71EF /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB958AE326EED0C000BD71EF /* Tweet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +47,12 @@
 		CB958ABA26EEC52900BD71EF /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		CB958ABD26EEC7EA00BD71EF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CB958AC026EEC7FD00BD71EF /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		CB958AD226EECF2300BD71EF /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		CB958AD726EECF7200BD71EF /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		CB958ADA26EECFB800BD71EF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		CB958ADD26EECFE700BD71EF /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		CB958AE026EED04E00BD71EF /* Signup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Signup.swift; sourceTree = "<group>"; };
+		CB958AE326EED0C000BD71EF /* Tweet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +90,7 @@
 		CB958A8726ED4D1400BD71EF /* PlatziTweets */ = {
 			isa = PBXGroup;
 			children = (
+				CB958AD126EECF0200BD71EF /* Data */,
 				CB958A9D26ED4D5400BD71EF /* Application */,
 				CB958A9E26ED4D5900BD71EF /* View */,
 				CB958A9F26ED4D6100BD71EF /* ViewModel */,
@@ -94,10 +107,10 @@
 		CB958A9D26ED4D5400BD71EF /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				CB958AB026EEC29400BD71EF /* SplashCoordinator.swift */,
-				CB958AA026ED4D8400BD71EF /* SplashViewController.swift */,
-				CB958ABD26EEC7EA00BD71EF /* LoginViewController.swift */,
-				CB958AC026EEC7FD00BD71EF /* SignupViewController.swift */,
+				CB958ACB26EECE1400BD71EF /* Signup */,
+				CB958ACA26EECE0F00BD71EF /* Login */,
+				CB958AC926EECE0A00BD71EF /* Splash */,
+				CB958AC826EECDF400BD71EF /* Home */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -105,9 +118,10 @@
 		CB958A9E26ED4D5900BD71EF /* View */ = {
 			isa = PBXGroup;
 			children = (
-				CB958AB426EEC37400BD71EF /* LoginView.swift */,
-				CB958AB726EEC47200BD71EF /* SignupView.swift */,
-				CB958ABA26EEC52900BD71EF /* SplashView.swift */,
+				CB958ACF26EECE4100BD71EF /* Home */,
+				CB958ACE26EECE3200BD71EF /* Splash */,
+				CB958ACD26EECE2D00BD71EF /* Login */,
+				CB958ACC26EECE2300BD71EF /* Signup */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -117,6 +131,82 @@
 			children = (
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CB958AC826EECDF400BD71EF /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		CB958AC926EECE0A00BD71EF /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				CB958AB026EEC29400BD71EF /* SplashCoordinator.swift */,
+				CB958AA026ED4D8400BD71EF /* SplashViewController.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		CB958ACA26EECE0F00BD71EF /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				CB958ABD26EEC7EA00BD71EF /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		CB958ACB26EECE1400BD71EF /* Signup */ = {
+			isa = PBXGroup;
+			children = (
+				CB958AC026EEC7FD00BD71EF /* SignupViewController.swift */,
+			);
+			path = Signup;
+			sourceTree = "<group>";
+		};
+		CB958ACC26EECE2300BD71EF /* Signup */ = {
+			isa = PBXGroup;
+			children = (
+				CB958AB726EEC47200BD71EF /* SignupView.swift */,
+			);
+			path = Signup;
+			sourceTree = "<group>";
+		};
+		CB958ACD26EECE2D00BD71EF /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				CB958AB426EEC37400BD71EF /* LoginView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		CB958ACE26EECE3200BD71EF /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				CB958ABA26EEC52900BD71EF /* SplashView.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		CB958ACF26EECE4100BD71EF /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		CB958AD126EECF0200BD71EF /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				CB958AD226EECF2300BD71EF /* Service.swift */,
+				CB958AD726EECF7200BD71EF /* Login.swift */,
+				CB958ADA26EECFB800BD71EF /* User.swift */,
+				CB958ADD26EECFE700BD71EF /* Error.swift */,
+				CB958AE026EED04E00BD71EF /* Signup.swift */,
+				CB958AE326EED0C000BD71EF /* Tweet.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,11 +294,17 @@
 				CB958AC126EEC7FD00BD71EF /* SignupViewController.swift in Sources */,
 				CB958AB826EEC47200BD71EF /* SignupView.swift in Sources */,
 				CB958AA126ED4D8400BD71EF /* SplashViewController.swift in Sources */,
+				CB958ADE26EECFE700BD71EF /* Error.swift in Sources */,
 				CB958AB126EEC29400BD71EF /* SplashCoordinator.swift in Sources */,
 				CB958A8926ED4D1400BD71EF /* AppDelegate.swift in Sources */,
+				CB958AE426EED0C000BD71EF /* Tweet.swift in Sources */,
+				CB958AD326EECF2300BD71EF /* Service.swift in Sources */,
+				CB958AE126EED04E00BD71EF /* Signup.swift in Sources */,
 				CB958ABE26EEC7EA00BD71EF /* LoginViewController.swift in Sources */,
 				CB958AB526EEC37400BD71EF /* LoginView.swift in Sources */,
+				CB958ADB26EECFB800BD71EF /* User.swift in Sources */,
 				CB958A8B26ED4D1400BD71EF /* SceneDelegate.swift in Sources */,
+				CB958AD826EECF7200BD71EF /* Login.swift in Sources */,
 				CB958ABB26EEC52900BD71EF /* SplashView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
