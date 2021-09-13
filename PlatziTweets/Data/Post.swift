@@ -1,4 +1,4 @@
-public struct Tweet: Codable {
+public struct Post: Codable {
     let id: String
     let author: User
     let imageUrl: String?

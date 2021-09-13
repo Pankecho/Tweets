@@ -29,7 +29,8 @@
 		CB958ADB26EECFB800BD71EF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB958ADA26EECFB800BD71EF /* User.swift */; };
 		CB958ADE26EECFE700BD71EF /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB958ADD26EECFE700BD71EF /* Error.swift */; };
 		CB958AE126EED04E00BD71EF /* Signup.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB958AE026EED04E00BD71EF /* Signup.swift */; };
-		CB958AE426EED0C000BD71EF /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB958AE326EED0C000BD71EF /* Tweet.swift */; };
+		CB958AE426EED0C000BD71EF /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB958AE326EED0C000BD71EF /* Post.swift */; };
+		CB958AE826EED32600BD71EF /* SimpleNetworking in Frameworks */ = {isa = PBXBuildFile; productRef = CB958AE726EED32600BD71EF /* SimpleNetworking */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,7 +53,7 @@
 		CB958ADA26EECFB800BD71EF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		CB958ADD26EECFE700BD71EF /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		CB958AE026EED04E00BD71EF /* Signup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Signup.swift; sourceTree = "<group>"; };
-		CB958AE326EED0C000BD71EF /* Tweet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
+		CB958AE326EED0C000BD71EF /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +65,7 @@
 				CB958AA926ED4DC400BD71EF /* RxRelay in Frameworks */,
 				CB958AA726ED4DC400BD71EF /* RxCocoa in Frameworks */,
 				CB958AC626EECBCD00BD71EF /* NotificationBannerSwift in Frameworks */,
+				CB958AE826EED32600BD71EF /* SimpleNetworking in Frameworks */,
 				CB958AA526ED4DC400BD71EF /* RxSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -204,7 +206,7 @@
 				CB958ADA26EECFB800BD71EF /* User.swift */,
 				CB958ADD26EECFE700BD71EF /* Error.swift */,
 				CB958AE026EED04E00BD71EF /* Signup.swift */,
-				CB958AE326EED0C000BD71EF /* Tweet.swift */,
+				CB958AE326EED0C000BD71EF /* Post.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -231,6 +233,7 @@
 				CB958AA826ED4DC400BD71EF /* RxRelay */,
 				CB958AAC26ED4DD900BD71EF /* PureLayout */,
 				CB958AC526EECBCD00BD71EF /* NotificationBannerSwift */,
+				CB958AE726EED32600BD71EF /* SimpleNetworking */,
 			);
 			productName = PlatziTweets;
 			productReference = CB958A8526ED4D1400BD71EF /* PlatziTweets.app */;
@@ -263,6 +266,7 @@
 				CB958AA326ED4DC400BD71EF /* XCRemoteSwiftPackageReference "RxSwift" */,
 				CB958AAB26ED4DD900BD71EF /* XCRemoteSwiftPackageReference "PureLayout" */,
 				CB958AC426EECBCD00BD71EF /* XCRemoteSwiftPackageReference "NotificationBanner" */,
+				CB958AE626EED32600BD71EF /* XCRemoteSwiftPackageReference "SimpleNetworking" */,
 			);
 			productRefGroup = CB958A8626ED4D1400BD71EF /* Products */;
 			projectDirPath = "";
@@ -297,7 +301,7 @@
 				CB958ADE26EECFE700BD71EF /* Error.swift in Sources */,
 				CB958AB126EEC29400BD71EF /* SplashCoordinator.swift in Sources */,
 				CB958A8926ED4D1400BD71EF /* AppDelegate.swift in Sources */,
-				CB958AE426EED0C000BD71EF /* Tweet.swift in Sources */,
+				CB958AE426EED0C000BD71EF /* Post.swift in Sources */,
 				CB958AD326EECF2300BD71EF /* Service.swift in Sources */,
 				CB958AE126EED04E00BD71EF /* Signup.swift in Sources */,
 				CB958ABE26EEC7EA00BD71EF /* LoginViewController.swift in Sources */,
@@ -533,6 +537,14 @@
 				minimumVersion = 3.0.6;
 			};
 		};
+		CB958AE626EED32600BD71EF /* XCRemoteSwiftPackageReference "SimpleNetworking" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/gonzalezreal/SimpleNetworking";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -560,6 +572,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CB958AC426EECBCD00BD71EF /* XCRemoteSwiftPackageReference "NotificationBanner" */;
 			productName = NotificationBannerSwift;
+		};
+		CB958AE726EED32600BD71EF /* SimpleNetworking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CB958AE626EED32600BD71EF /* XCRemoteSwiftPackageReference "SimpleNetworking" */;
+			productName = SimpleNetworking;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
