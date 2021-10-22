@@ -1,6 +1,10 @@
 import UIKit
+import RxSwift
+import RxCocoa
+import NotificationBannerSwift
 
 public class SignupViewController: UIViewController {
+    private let disposeBag = DisposeBag()
     
     public init() {
         super.init(nibName: nil, bundle: nil)
@@ -13,7 +17,7 @@ public class SignupViewController: UIViewController {
     public override func loadView() {
         let view = SignupView()
         self.view = view
-        bind()
+        bind(view: view)
     }
 
     public override func viewDidLoad() {
@@ -21,8 +25,39 @@ public class SignupViewController: UIViewController {
         navigationController?.navigationBar.prefersLargeTitles = true
     }
     
-    private func bind() {
+    private func bind(view: SignupView) {
         navigationItem.backBarButtonItem?.title = ""
         navigationItem.title = "Signup"
+        
+        view.signupButton.rx.tap.subscribe(onNext: { [weak self] in
+            guard let email = view.emailTextField.text,
+                  let names = view.namesTextField.text,
+                  let password = view.passwordField.text else { return }
+          
+            let data = SignupRequest(email: email,
+                                     password: password,
+                                     names: names)
+            
+            SN.post(endpoint: Service.signup,
+                    model: data) { [weak self] (response: SNResultWithEntity<AuthResponse, ErrorResponse>) in
+                switch response {
+                case .success(_):
+                    let homeViewController = HomeViewController()
+                    self?.navigationController?.pushViewController(homeViewController,
+                                                                   animated: true)
+                case .error(let error):
+                    NotificationBanner(title: "Error",
+                                       subtitle: error.localizedDescription,
+                                       style: .danger)
+                        .show()
+                case .errorResult(let entity):
+                    NotificationBanner(title: "Error",
+                                       subtitle: entity.error,
+                                       style: .warning)
+                        .show()
+                }
+            }
+        })
+        .disposed(by: disposeBag)
     }
 }

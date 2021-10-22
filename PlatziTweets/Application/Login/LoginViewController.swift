@@ -51,7 +51,7 @@ public class LoginViewController: UIViewController {
                 case .errorResult(let entity):
                     NotificationBanner(title: "Error",
                                        subtitle: entity.error,
-                                       style: .danger)
+                                       style: .warning)
                         .show()
                 }
             }
