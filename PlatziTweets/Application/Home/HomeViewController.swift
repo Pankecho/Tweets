@@ -12,11 +12,17 @@ public class HomeViewController: UIViewController {
     }
     
     public override func loadView() {
+        let view = HomeView()
+        self.view = view
+        bind(view: view)
     }
 
     public override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.prefersLargeTitles = true
-        view.backgroundColor = .blue
+    }
+    
+    private func bind(view: HomeView) {
+        navigationItem.title = "Tweets"
     }
 }

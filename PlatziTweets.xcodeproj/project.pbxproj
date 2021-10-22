@@ -25,6 +25,8 @@
 		CB218382272274F100FBC792 /* RequestMethodTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB218372272274F100FBC792 /* RequestMethodTypes.swift */; };
 		CB218383272274F100FBC792 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB218373272274F100FBC792 /* Errors.swift */; };
 		CB2183872722764400FBC792 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2183862722764400FBC792 /* HomeViewController.swift */; };
+		CB21838A27227A2600FBC792 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB21838927227A2600FBC792 /* HomeView.swift */; };
+		CB21838E27227B6600FBC792 /* TweetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB21838D27227B6600FBC792 /* TweetTableViewCell.swift */; };
 		CB958A8926ED4D1400BD71EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB958A8826ED4D1400BD71EF /* AppDelegate.swift */; };
 		CB958A8B26ED4D1400BD71EF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB958A8A26ED4D1400BD71EF /* SceneDelegate.swift */; };
 		CB958A9026ED4D1400BD71EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB958A8E26ED4D1400BD71EF /* Main.storyboard */; };
@@ -68,6 +70,8 @@
 		CB218372272274F100FBC792 /* RequestMethodTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestMethodTypes.swift; sourceTree = "<group>"; };
 		CB218373272274F100FBC792 /* Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		CB2183862722764400FBC792 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		CB21838927227A2600FBC792 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		CB21838D27227B6600FBC792 /* TweetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetTableViewCell.swift; sourceTree = "<group>"; };
 		CB958A8526ED4D1400BD71EF /* PlatziTweets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlatziTweets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB958A8826ED4D1400BD71EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB958A8A26ED4D1400BD71EF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -269,6 +273,8 @@
 		CB958ACF26EECE4100BD71EF /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				CB21838927227A2600FBC792 /* HomeView.swift */,
+				CB21838D27227B6600FBC792 /* TweetTableViewCell.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -371,6 +377,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB958AC126EEC7FD00BD71EF /* SignupViewController.swift in Sources */,
+				CB21838E27227B6600FBC792 /* TweetTableViewCell.swift in Sources */,
 				CB218379272274F100FBC792 /* SN+PutMethods.swift in Sources */,
 				CB21837C272274F100FBC792 /* ResultBlocks.swift in Sources */,
 				CB21837A272274F100FBC792 /* SN.swift in Sources */,
@@ -397,6 +404,7 @@
 				CB958AB526EEC37400BD71EF /* LoginView.swift in Sources */,
 				CB958ADB26EECFB800BD71EF /* User.swift in Sources */,
 				CB958A8B26ED4D1400BD71EF /* SceneDelegate.swift in Sources */,
+				CB21838A27227A2600FBC792 /* HomeView.swift in Sources */,
 				CB2183872722764400FBC792 /* HomeViewController.swift in Sources */,
 				CB21837D272274F100FBC792 /* Validator.swift in Sources */,
 				CB958AD826EECF7200BD71EF /* Login.swift in Sources */,
