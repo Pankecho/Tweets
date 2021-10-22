@@ -7,6 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB1DB8FF26F019C800C5B182 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = CB1DB8FE26F019C800C5B182 /* Alamofire */; };
+		CB218374272274F100FBC792 /* SimpleNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB218362272274F100FBC792 /* SimpleNetworking.swift */; };
+		CB218375272274F100FBC792 /* SN+DeleteMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB218364272274F100FBC792 /* SN+DeleteMethods.swift */; };
+		CB218376272274F100FBC792 /* SN+PostMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB218365272274F100FBC792 /* SN+PostMethods.swift */; };
+		CB218377272274F100FBC792 /* Encodable+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB218366272274F100FBC792 /* Encodable+Extensions.swift */; };
+		CB218378272274F100FBC792 /* SN+GetMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB218367272274F100FBC792 /* SN+GetMethods.swift */; };
+		CB218379272274F100FBC792 /* SN+PutMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB218368272274F100FBC792 /* SN+PutMethods.swift */; };
+		CB21837A272274F100FBC792 /* SN.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB218369272274F100FBC792 /* SN.swift */; };
+		CB21837B272274F100FBC792 /* DebugMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB21836B272274F100FBC792 /* DebugMode.swift */; };
+		CB21837C272274F100FBC792 /* ResultBlocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB21836C272274F100FBC792 /* ResultBlocks.swift */; };
+		CB21837D272274F100FBC792 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB21836D272274F100FBC792 /* Validator.swift */; };
+		CB21837E272274F100FBC792 /* Requests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB21836E272274F100FBC792 /* Requests.swift */; };
+		CB21837F272274F100FBC792 /* SSLConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB21836F272274F100FBC792 /* SSLConfig.swift */; };
+		CB218380272274F100FBC792 /* NSURLSessionPinningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB218370272274F100FBC792 /* NSURLSessionPinningDelegate.swift */; };
+		CB218381272274F100FBC792 /* Thread.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB218371272274F100FBC792 /* Thread.swift */; };
+		CB218382272274F100FBC792 /* RequestMethodTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB218372272274F100FBC792 /* RequestMethodTypes.swift */; };
+		CB218383272274F100FBC792 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB218373272274F100FBC792 /* Errors.swift */; };
+		CB2183872722764400FBC792 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2183862722764400FBC792 /* HomeViewController.swift */; };
 		CB958A8926ED4D1400BD71EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB958A8826ED4D1400BD71EF /* AppDelegate.swift */; };
 		CB958A8B26ED4D1400BD71EF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB958A8A26ED4D1400BD71EF /* SceneDelegate.swift */; };
 		CB958A9026ED4D1400BD71EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB958A8E26ED4D1400BD71EF /* Main.storyboard */; };
@@ -30,10 +48,26 @@
 		CB958ADE26EECFE700BD71EF /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB958ADD26EECFE700BD71EF /* Error.swift */; };
 		CB958AE126EED04E00BD71EF /* Signup.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB958AE026EED04E00BD71EF /* Signup.swift */; };
 		CB958AE426EED0C000BD71EF /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB958AE326EED0C000BD71EF /* Post.swift */; };
-		CB958AE826EED32600BD71EF /* SimpleNetworking in Frameworks */ = {isa = PBXBuildFile; productRef = CB958AE726EED32600BD71EF /* SimpleNetworking */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CB218362272274F100FBC792 /* SimpleNetworking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleNetworking.swift; sourceTree = "<group>"; };
+		CB218364272274F100FBC792 /* SN+DeleteMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SN+DeleteMethods.swift"; sourceTree = "<group>"; };
+		CB218365272274F100FBC792 /* SN+PostMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SN+PostMethods.swift"; sourceTree = "<group>"; };
+		CB218366272274F100FBC792 /* Encodable+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Encodable+Extensions.swift"; sourceTree = "<group>"; };
+		CB218367272274F100FBC792 /* SN+GetMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SN+GetMethods.swift"; sourceTree = "<group>"; };
+		CB218368272274F100FBC792 /* SN+PutMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SN+PutMethods.swift"; sourceTree = "<group>"; };
+		CB218369272274F100FBC792 /* SN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SN.swift; sourceTree = "<group>"; };
+		CB21836B272274F100FBC792 /* DebugMode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugMode.swift; sourceTree = "<group>"; };
+		CB21836C272274F100FBC792 /* ResultBlocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultBlocks.swift; sourceTree = "<group>"; };
+		CB21836D272274F100FBC792 /* Validator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
+		CB21836E272274F100FBC792 /* Requests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Requests.swift; sourceTree = "<group>"; };
+		CB21836F272274F100FBC792 /* SSLConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSLConfig.swift; sourceTree = "<group>"; };
+		CB218370272274F100FBC792 /* NSURLSessionPinningDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSURLSessionPinningDelegate.swift; sourceTree = "<group>"; };
+		CB218371272274F100FBC792 /* Thread.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Thread.swift; sourceTree = "<group>"; };
+		CB218372272274F100FBC792 /* RequestMethodTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestMethodTypes.swift; sourceTree = "<group>"; };
+		CB218373272274F100FBC792 /* Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		CB2183862722764400FBC792 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		CB958A8526ED4D1400BD71EF /* PlatziTweets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlatziTweets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB958A8826ED4D1400BD71EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB958A8A26ED4D1400BD71EF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,10 +96,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB958AAD26ED4DD900BD71EF /* PureLayout in Frameworks */,
+				CB1DB8FF26F019C800C5B182 /* Alamofire in Frameworks */,
 				CB958AA926ED4DC400BD71EF /* RxRelay in Frameworks */,
 				CB958AA726ED4DC400BD71EF /* RxCocoa in Frameworks */,
 				CB958AC626EECBCD00BD71EF /* NotificationBannerSwift in Frameworks */,
-				CB958AE826EED32600BD71EF /* SimpleNetworking in Frameworks */,
 				CB958AA526ED4DC400BD71EF /* RxSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -73,6 +107,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CB218361272274D000FBC792 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				CB218363272274F100FBC792 /* Extensions */,
+				CB21836A272274F100FBC792 /* Helpers */,
+				CB218362272274F100FBC792 /* SimpleNetworking.swift */,
+				CB218369272274F100FBC792 /* SN.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		CB218363272274F100FBC792 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CB218364272274F100FBC792 /* SN+DeleteMethods.swift */,
+				CB218365272274F100FBC792 /* SN+PostMethods.swift */,
+				CB218366272274F100FBC792 /* Encodable+Extensions.swift */,
+				CB218367272274F100FBC792 /* SN+GetMethods.swift */,
+				CB218368272274F100FBC792 /* SN+PutMethods.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CB21836A272274F100FBC792 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				CB21836B272274F100FBC792 /* DebugMode.swift */,
+				CB21836C272274F100FBC792 /* ResultBlocks.swift */,
+				CB21836D272274F100FBC792 /* Validator.swift */,
+				CB21836E272274F100FBC792 /* Requests.swift */,
+				CB21836F272274F100FBC792 /* SSLConfig.swift */,
+				CB218370272274F100FBC792 /* NSURLSessionPinningDelegate.swift */,
+				CB218371272274F100FBC792 /* Thread.swift */,
+				CB218372272274F100FBC792 /* RequestMethodTypes.swift */,
+				CB218373272274F100FBC792 /* Errors.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		CB958A7C26ED4D1400BD71EF = {
 			isa = PBXGroup;
 			children = (
@@ -92,8 +165,9 @@
 		CB958A8726ED4D1400BD71EF /* PlatziTweets */ = {
 			isa = PBXGroup;
 			children = (
-				CB958AD126EECF0200BD71EF /* Data */,
 				CB958A9D26ED4D5400BD71EF /* Application */,
+				CB958AD126EECF0200BD71EF /* Data */,
+				CB218361272274D000FBC792 /* Networking */,
 				CB958A9E26ED4D5900BD71EF /* View */,
 				CB958A9F26ED4D6100BD71EF /* ViewModel */,
 				CB958A8826ED4D1400BD71EF /* AppDelegate.swift */,
@@ -138,6 +212,7 @@
 		CB958AC826EECDF400BD71EF /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				CB2183862722764400FBC792 /* HomeViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -233,7 +308,7 @@
 				CB958AA826ED4DC400BD71EF /* RxRelay */,
 				CB958AAC26ED4DD900BD71EF /* PureLayout */,
 				CB958AC526EECBCD00BD71EF /* NotificationBannerSwift */,
-				CB958AE726EED32600BD71EF /* SimpleNetworking */,
+				CB1DB8FE26F019C800C5B182 /* Alamofire */,
 			);
 			productName = PlatziTweets;
 			productReference = CB958A8526ED4D1400BD71EF /* PlatziTweets.app */;
@@ -266,7 +341,7 @@
 				CB958AA326ED4DC400BD71EF /* XCRemoteSwiftPackageReference "RxSwift" */,
 				CB958AAB26ED4DD900BD71EF /* XCRemoteSwiftPackageReference "PureLayout" */,
 				CB958AC426EECBCD00BD71EF /* XCRemoteSwiftPackageReference "NotificationBanner" */,
-				CB958AE626EED32600BD71EF /* XCRemoteSwiftPackageReference "SimpleNetworking" */,
+				CB1DB8FD26F019C800C5B182 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = CB958A8626ED4D1400BD71EF /* Products */;
 			projectDirPath = "";
@@ -296,19 +371,36 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB958AC126EEC7FD00BD71EF /* SignupViewController.swift in Sources */,
+				CB218379272274F100FBC792 /* SN+PutMethods.swift in Sources */,
+				CB21837C272274F100FBC792 /* ResultBlocks.swift in Sources */,
+				CB21837A272274F100FBC792 /* SN.swift in Sources */,
 				CB958AB826EEC47200BD71EF /* SignupView.swift in Sources */,
+				CB21837F272274F100FBC792 /* SSLConfig.swift in Sources */,
+				CB218375272274F100FBC792 /* SN+DeleteMethods.swift in Sources */,
+				CB218377272274F100FBC792 /* Encodable+Extensions.swift in Sources */,
+				CB21837B272274F100FBC792 /* DebugMode.swift in Sources */,
 				CB958AA126ED4D8400BD71EF /* SplashViewController.swift in Sources */,
+				CB218374272274F100FBC792 /* SimpleNetworking.swift in Sources */,
+				CB218378272274F100FBC792 /* SN+GetMethods.swift in Sources */,
 				CB958ADE26EECFE700BD71EF /* Error.swift in Sources */,
+				CB218383272274F100FBC792 /* Errors.swift in Sources */,
 				CB958AB126EEC29400BD71EF /* SplashCoordinator.swift in Sources */,
 				CB958A8926ED4D1400BD71EF /* AppDelegate.swift in Sources */,
 				CB958AE426EED0C000BD71EF /* Post.swift in Sources */,
+				CB218381272274F100FBC792 /* Thread.swift in Sources */,
 				CB958AD326EECF2300BD71EF /* Service.swift in Sources */,
 				CB958AE126EED04E00BD71EF /* Signup.swift in Sources */,
+				CB218380272274F100FBC792 /* NSURLSessionPinningDelegate.swift in Sources */,
+				CB21837E272274F100FBC792 /* Requests.swift in Sources */,
+				CB218376272274F100FBC792 /* SN+PostMethods.swift in Sources */,
 				CB958ABE26EEC7EA00BD71EF /* LoginViewController.swift in Sources */,
 				CB958AB526EEC37400BD71EF /* LoginView.swift in Sources */,
 				CB958ADB26EECFB800BD71EF /* User.swift in Sources */,
 				CB958A8B26ED4D1400BD71EF /* SceneDelegate.swift in Sources */,
+				CB2183872722764400FBC792 /* HomeViewController.swift in Sources */,
+				CB21837D272274F100FBC792 /* Validator.swift in Sources */,
 				CB958AD826EECF7200BD71EF /* Login.swift in Sources */,
+				CB218382272274F100FBC792 /* RequestMethodTypes.swift in Sources */,
 				CB958ABB26EEC52900BD71EF /* SplashView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -513,6 +605,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		CB1DB8FD26F019C800C5B182 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.3;
+			};
+		};
 		CB958AA326ED4DC400BD71EF /* XCRemoteSwiftPackageReference "RxSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ReactiveX/RxSwift";
@@ -537,17 +637,14 @@
 				minimumVersion = 3.0.6;
 			};
 		};
-		CB958AE626EED32600BD71EF /* XCRemoteSwiftPackageReference "SimpleNetworking" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/gonzalezreal/SimpleNetworking";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.0.0;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		CB1DB8FE26F019C800C5B182 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CB1DB8FD26F019C800C5B182 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
 		CB958AA426ED4DC400BD71EF /* RxSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = CB958AA326ED4DC400BD71EF /* XCRemoteSwiftPackageReference "RxSwift" */;
@@ -572,11 +669,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CB958AC426EECBCD00BD71EF /* XCRemoteSwiftPackageReference "NotificationBanner" */;
 			productName = NotificationBannerSwift;
-		};
-		CB958AE726EED32600BD71EF /* SimpleNetworking */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CB958AE626EED32600BD71EF /* XCRemoteSwiftPackageReference "SimpleNetworking" */;
-			productName = SimpleNetworking;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
