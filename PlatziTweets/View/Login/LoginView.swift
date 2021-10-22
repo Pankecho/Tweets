@@ -17,7 +17,14 @@ public class LoginView: UIView {
     }
     
     private func setup() {
+        emailTextField.borderStyle = .roundedRect
+        passwordField.borderStyle = .roundedRect
+        
         emailTextField.placeholder = "Email"
+        emailTextField.textContentType = .emailAddress
+        emailTextField.autocapitalizationType = .none
+        emailTextField.autocorrectionType = .no
+        
         passwordField.placeholder = "Password"
         passwordField.isSecureTextEntry = true
         
@@ -25,12 +32,16 @@ public class LoginView: UIView {
         loginButton.backgroundColor = .black
         loginButton.setTitleColor(.white, for: .normal)
         
+        loginButton.setTitleColor(.gray, for: .disabled)
+        
         loginButton.layer.cornerRadius = 25
         
         backgroundColor = .white
     }
     
     private func layout() {
+        emailTextField.autoSetDimension(.height, toSize: 40)
+        passwordField.autoSetDimension(.height, toSize: 40)
         loginButton.autoSetDimension(.height, toSize: 50)
         
         let stackView = UIStackView(arrangedSubviews: [
