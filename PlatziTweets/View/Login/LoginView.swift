@@ -5,6 +5,7 @@ public class LoginView: UIView {
     public let emailTextField = UITextField()
     public let passwordField = UITextField()
     public let loginButton = UIButton()
+    private let backgroundImageView = UIImageView()
     
     init() {
         super.init(frame: .zero)
@@ -34,15 +35,21 @@ public class LoginView: UIView {
         
         loginButton.setTitleColor(.gray, for: .disabled)
         
-        loginButton.layer.cornerRadius = 25
+        loginButton.setCornerRadius(25)
         
         backgroundColor = .white
+        
+        backgroundImageView.contentMode = .scaleAspectFill
+        backgroundImageView.image = UIImage(named: "cityBackground")
     }
     
     private func layout() {
-        emailTextField.autoSetDimension(.height, toSize: 40)
-        passwordField.autoSetDimension(.height, toSize: 40)
-        loginButton.autoSetDimension(.height, toSize: 50)
+        emailTextField.autoSetDimension(.height,
+                                        toSize: 40)
+        passwordField.autoSetDimension(.height,
+                                       toSize: 40)
+        loginButton.autoSetDimension(.height,
+                                     toSize: 50)
         
         let stackView = UIStackView(arrangedSubviews: [
             emailTextField,
@@ -54,8 +61,16 @@ public class LoginView: UIView {
         stackView.spacing = 20
         
         addSubview(stackView)
-        stackView.autoPinEdge(toSuperviewMargin: .top, withInset: 20)
-        stackView.autoPinEdge(.left, to: .left, of: self, withOffset: 20)
-        stackView.autoPinEdge(.right, to: .right, of: self, withOffset: -20)
+        stackView.autoPinEdge(toSuperviewMargin: .top,
+                              withInset: 20)
+        stackView.autoPinEdge(toSuperviewEdge: .left, withInset: 20)
+        stackView.autoPinEdge(toSuperviewEdge: .right, withInset: 20)
+        
+        addSubview(backgroundImageView)
+        backgroundImageView.autoSetDimension(.height,
+                                             toSize: 150)
+        backgroundImageView.autoPinEdge(toSuperviewEdge: .bottom)
+        backgroundImageView.autoPinEdge(toSuperviewEdge: .left)
+        backgroundImageView.autoPinEdge(toSuperviewEdge: .right)
     }
 }

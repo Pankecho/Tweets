@@ -39,7 +39,7 @@ public class SplashView: UIView {
         loginButton.setTitle("Login", for: .normal)
         loginButton.setTitleColor(.black, for: .normal)
         loginButton.backgroundColor = .white
-        loginButton.layer.cornerRadius = 25
+        loginButton.setCornerRadius(25)
         
         signupButton.setTitle("Signup", for: .normal)
         signupButton.setTitleColor(.white, for: .normal)
