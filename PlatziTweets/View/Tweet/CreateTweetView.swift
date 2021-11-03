@@ -21,10 +21,10 @@ public class CreateTweetView: UIView {
     
     private func setup() {
         titleLabel.text = "New Tweet"
-        titleLabel.font = .boldSystemFont(ofSize: 36)
+        titleLabel.font = .boldSystemFont(ofSize: 20)
         
         closeButton.setImage(UIImage(systemName: "stop"),
-                                  for: .normal)
+                             for: .normal)
         
         contentTextView.backgroundColor = .lightGray
         
@@ -33,9 +33,12 @@ public class CreateTweetView: UIView {
         saveButton.backgroundColor = .black
         saveButton.setTitleColor(.white,
                                  for: .normal)
+        saveButton.setCornerRadius(25)
         
         backgroundImageView.contentMode = .scaleAspectFill
         backgroundImageView.image = UIImage(named: "cityBackground")
+        
+        backgroundColor = .white
     }
     
     private func layout() {
@@ -45,7 +48,7 @@ public class CreateTweetView: UIView {
         ])
         
         titleStackView.axis = .horizontal
-        titleStackView.distribution = .fillEqually
+        titleStackView.distribution = .equalSpacing
         
         contentTextView.autoSetDimension(.height,
                                          toSize: 120)

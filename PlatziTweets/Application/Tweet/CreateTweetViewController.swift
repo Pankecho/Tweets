@@ -2,7 +2,7 @@ import Foundation
 import UIKit
 import RxSwift
 
-public class HomeViewController: UIViewController {
+public class CreateTweetViewController: UIViewController {
     private let disposeBag = DisposeBag()
     
     public init() {
@@ -25,6 +25,9 @@ public class HomeViewController: UIViewController {
     }
     
     private func bind(view: CreateTweetView) {
-        
+        view.closeButton.rx.tap.bind { [weak self]  in
+            self?.dismiss(animated: true)
+        }
+        .disposed(by: disposeBag)
     }
 }

@@ -45,6 +45,13 @@ public class HomeViewController: UIViewController {
             return cell
         }
         .disposed(by: disposeBag)
+        
+        view.createButton.rx.tap.bind { [weak self] in
+            let vc = CreateTweetViewController()
+            self?.present(vc,
+                          animated: true)
+        }
+        .disposed(by: disposeBag)
     }
     
     private func getData() {
