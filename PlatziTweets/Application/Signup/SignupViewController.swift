@@ -49,6 +49,7 @@ public class SignupViewController: UIViewController {
                 case .success(let user):
                     SimpleNetworking.setAuthenticationHeader(prefix: "",
                                                              token: user.token)
+                    self?.saveData(email: email)
                     let homeViewController = HomeViewController()
                     let nvc = UINavigationController(rootViewController: homeViewController)
                     nvc.modalPresentationStyle = .fullScreen
@@ -68,5 +69,9 @@ public class SignupViewController: UIViewController {
             }
         })
         .disposed(by: disposeBag)
+    }
+    
+    private func saveData(email: String) {
+        UserDefaults.standard.setValue(email, forKey: "email")
     }
 }

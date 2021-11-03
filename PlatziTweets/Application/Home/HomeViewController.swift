@@ -34,15 +34,17 @@ public class HomeViewController: UIViewController {
         navigationItem.title = "Tweets"
         
         items.asObservable().bind(to: view.tweetsTableView.rx.items) { tableView, row, item in
-            let cell: TweetTableViewCell = tableView.dequeueReusableCell(withIdentifier: "tweetCell",
-                                                                         for: IndexPath(row: row,
-                                                                                        section: 0)) as! TweetTableViewCell
+            let cell: TweetTableViewCell = tableView
+                .dequeueReusableCell(withIdentifier: "tweetCell",
+                                     for: IndexPath(row: row,
+                                                    section: 0)) as! TweetTableViewCell
             cell.setup(author: item.author.names,
                        username: item.author.nickname,
                        imageURL: item.imageUrl,
                        videoURL: item.videoUrl,
                        text: item.text,
                        createdAt: item.createdAt)
+            
             return cell
         }
         .disposed(by: disposeBag)
@@ -69,6 +71,7 @@ public class HomeViewController: UIViewController {
                                    subtitle: error.localizedDescription,
                                    style: .danger)
                     .show()
+                
             case .errorResult(let entity):
                 NotificationBanner(title: "Error",
                                    subtitle: entity.error,
@@ -76,5 +79,9 @@ public class HomeViewController: UIViewController {
                     .show()
             }
         }
+    }
+    
+    // Todo delete
+    private func deletePost(at indexPath: IndexPath) {
     }
 }

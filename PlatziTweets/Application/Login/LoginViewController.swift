@@ -30,6 +30,8 @@ public class LoginViewController: UIViewController {
         navigationItem.backBarButtonItem?.title = ""
         navigationItem.title = "Login"
         
+        view.emailTextField.rx.text.onNext(loadEmail())
+        
         view.loginButton.rx.tap.subscribe(onNext: {
             guard let email = view.emailTextField.text,
                   let password = view.passwordField.text else { return }
@@ -49,6 +51,7 @@ public class LoginViewController: UIViewController {
                 case .success(let user):
                     SimpleNetworking.setAuthenticationHeader(prefix: "",
                                                              token: user.token)
+                    self?.saveData(email: email)
                     let homeViewController = HomeViewController()
                     let nvc = UINavigationController(rootViewController: homeViewController)
                     nvc.modalPresentationStyle = .fullScreen
@@ -69,5 +72,13 @@ public class LoginViewController: UIViewController {
             
         })
         .disposed(by: disposeBag)
+    }
+    
+    private func saveData(email: String) {
+        UserDefaults.standard.setValue(email, forKey: "email")
+    }
+    
+    private func loadEmail() -> String? {
+        UserDefaults.standard.value(forKey: "email") as? String
     }
 }
