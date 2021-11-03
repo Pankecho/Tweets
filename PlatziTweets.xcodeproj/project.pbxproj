@@ -30,6 +30,7 @@
 		CB6E3BCA2732076B007D3F69 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = CB6E3BC92732076B007D3F69 /* Kingfisher */; };
 		CB6E3BCE273213D8007D3F69 /* CreateTweetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6E3BCD273213D8007D3F69 /* CreateTweetView.swift */; };
 		CB6E3BD327321B36007D3F69 /* CreateTweetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6E3BD227321B36007D3F69 /* CreateTweetViewController.swift */; };
+		CB6E3BD827322797007D3F69 /* JGProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = CB6E3BD727322797007D3F69 /* JGProgressHUD */; };
 		CB8F5B9C272A291B0078AA61 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8F5B9B272A291B0078AA61 /* UIImageView.swift */; };
 		CB958A8926ED4D1400BD71EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB958A8826ED4D1400BD71EF /* AppDelegate.swift */; };
 		CB958A8B26ED4D1400BD71EF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB958A8A26ED4D1400BD71EF /* SceneDelegate.swift */; };
@@ -110,6 +111,7 @@
 				CB1DB8FF26F019C800C5B182 /* Alamofire in Frameworks */,
 				CB6E3BCA2732076B007D3F69 /* Kingfisher in Frameworks */,
 				CB958AA926ED4DC400BD71EF /* RxRelay in Frameworks */,
+				CB6E3BD827322797007D3F69 /* JGProgressHUD in Frameworks */,
 				CB958AA726ED4DC400BD71EF /* RxCocoa in Frameworks */,
 				CB958AC626EECBCD00BD71EF /* NotificationBannerSwift in Frameworks */,
 				CB958AA526ED4DC400BD71EF /* RxSwift in Frameworks */,
@@ -351,6 +353,7 @@
 				CB958AC526EECBCD00BD71EF /* NotificationBannerSwift */,
 				CB1DB8FE26F019C800C5B182 /* Alamofire */,
 				CB6E3BC92732076B007D3F69 /* Kingfisher */,
+				CB6E3BD727322797007D3F69 /* JGProgressHUD */,
 			);
 			productName = PlatziTweets;
 			productReference = CB958A8526ED4D1400BD71EF /* PlatziTweets.app */;
@@ -385,6 +388,7 @@
 				CB958AC426EECBCD00BD71EF /* XCRemoteSwiftPackageReference "NotificationBanner" */,
 				CB1DB8FD26F019C800C5B182 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				CB6E3BC82732076B007D3F69 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				CB6E3BD627322797007D3F69 /* XCRemoteSwiftPackageReference "JGProgressHUD" */,
 			);
 			productRefGroup = CB958A8626ED4D1400BD71EF /* Products */;
 			projectDirPath = "";
@@ -669,6 +673,14 @@
 				minimumVersion = 7.1.1;
 			};
 		};
+		CB6E3BD627322797007D3F69 /* XCRemoteSwiftPackageReference "JGProgressHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/JonasGessner/JGProgressHUD";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.2.0;
+			};
+		};
 		CB958AA326ED4DC400BD71EF /* XCRemoteSwiftPackageReference "RxSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ReactiveX/RxSwift";
@@ -705,6 +717,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CB6E3BC82732076B007D3F69 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		CB6E3BD727322797007D3F69 /* JGProgressHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CB6E3BD627322797007D3F69 /* XCRemoteSwiftPackageReference "JGProgressHUD" */;
+			productName = JGProgressHUD;
 		};
 		CB958AA426ED4DC400BD71EF /* RxSwift */ = {
 			isa = XCSwiftPackageProductDependency;

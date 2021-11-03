@@ -26,7 +26,8 @@ public class CreateTweetView: UIView {
         closeButton.setImage(UIImage(systemName: "stop"),
                              for: .normal)
         
-        contentTextView.backgroundColor = .lightGray
+        contentTextView.backgroundColor = UIColor.lightGray.withAlphaComponent(0.30)
+        contentTextView.setCornerRadius(12)
         
         saveButton.setTitle("Save",
                             for: .normal)

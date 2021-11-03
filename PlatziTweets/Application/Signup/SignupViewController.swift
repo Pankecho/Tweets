@@ -2,6 +2,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 import NotificationBannerSwift
+import JGProgressHUD
 
 public class SignupViewController: UIViewController {
     private let disposeBag = DisposeBag()
@@ -38,15 +39,21 @@ public class SignupViewController: UIViewController {
                                      password: password,
                                      names: names)
             
+            let hud = JGProgressHUD()
+            hud.show(in: view)
+            
             SN.post(endpoint: Service.signup,
                     model: data) { [weak self] (response: SNResultWithEntity<AuthResponse, ErrorResponse>) in
+                hud.dismiss()
                 switch response {
                 case .success(let user):
                     SimpleNetworking.setAuthenticationHeader(prefix: "",
                                                              token: user.token)
                     let homeViewController = HomeViewController()
-                    self?.navigationController?.pushViewController(homeViewController,
-                                                                   animated: true)
+                    let nvc = UINavigationController(rootViewController: homeViewController)
+                    nvc.modalPresentationStyle = .fullScreen
+                    self?.present(nvc,
+                                  animated: true)
                 case .error(let error):
                     NotificationBanner(title: "Error",
                                        subtitle: error.localizedDescription,

@@ -3,6 +3,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 import NotificationBannerSwift
+import JGProgressHUD
 
 public class HomeViewController: UIViewController {
     private let disposeBag = DisposeBag()
@@ -55,7 +56,10 @@ public class HomeViewController: UIViewController {
     }
     
     private func getData() {
+        let hud = JGProgressHUD()
+        hud.show(in: view)
         SN.get(endpoint: Service.posts) { [weak self] (response: SNResultWithEntity<[Post], ErrorResponse>) in
+            hud.dismiss()
             switch response {
             case .success(let posts):
                 self?.items.onNext(posts)

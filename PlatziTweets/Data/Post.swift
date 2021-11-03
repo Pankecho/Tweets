@@ -15,3 +15,15 @@ public struct Location: Codable {
     let latitude: Double
     let longitude: Double
 }
+
+public struct PostRequest: Codable {
+    let text: String
+    let imageURL: String?
+    let videoURL: String?
+    let location: PostLocationRequest?
+}
+
+public struct PostLocationRequest: Codable {
+    let latitude: Double
+    let longitude: Double
+}
