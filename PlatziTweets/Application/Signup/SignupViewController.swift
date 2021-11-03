@@ -48,13 +48,11 @@ public class SignupViewController: UIViewController {
                     self?.navigationController?.pushViewController(homeViewController,
                                                                    animated: true)
                 case .error(let error):
-                    print(error)
                     NotificationBanner(title: "Error",
                                        subtitle: error.localizedDescription,
                                        style: .danger)
                         .show()
                 case .errorResult(let entity):
-                    print(entity)
                     NotificationBanner(title: "Error",
                                        subtitle: entity.error,
                                        style: .warning)
