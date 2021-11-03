@@ -41,16 +41,20 @@ public class SignupViewController: UIViewController {
             SN.post(endpoint: Service.signup,
                     model: data) { [weak self] (response: SNResultWithEntity<AuthResponse, ErrorResponse>) in
                 switch response {
-                case .success(_):
+                case .success(let user):
+                    SimpleNetworking.setAuthenticationHeader(prefix: "",
+                                                             token: user.token)
                     let homeViewController = HomeViewController()
                     self?.navigationController?.pushViewController(homeViewController,
                                                                    animated: true)
                 case .error(let error):
+                    print(error)
                     NotificationBanner(title: "Error",
                                        subtitle: error.localizedDescription,
                                        style: .danger)
                         .show()
                 case .errorResult(let entity):
+                    print(entity)
                     NotificationBanner(title: "Error",
                                        subtitle: entity.error,
                                        style: .warning)

@@ -39,7 +39,9 @@ public class LoginViewController: UIViewController {
             SN.post(endpoint: Service.login,
                     model: data) { [weak self] (response: SNResultWithEntity<AuthResponse, ErrorResponse>) in
                 switch response {
-                case .success(_):
+                case .success(let user):
+                    SimpleNetworking.setAuthenticationHeader(prefix: "",
+                                                             token: user.token)
                     let homeViewController = HomeViewController()
                     self?.navigationController?.pushViewController(homeViewController,
                                                                    animated: true)
