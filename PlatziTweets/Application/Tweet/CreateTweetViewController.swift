@@ -4,6 +4,9 @@ import RxSwift
 import NotificationBannerSwift
 import JGProgressHUD
 import FirebaseStorage
+import AVFoundation
+import AVKit
+import MobileCoreServices
 
 public class CreateTweetViewController: UIViewController, UINavigationControllerDelegate {
     private let disposeBag = DisposeBag()
@@ -46,9 +49,24 @@ public class CreateTweetViewController: UIViewController, UINavigationController
     
     private func openCamera() {
         let imagePicker = UIImagePickerController()
-        imagePicker.sourceType = .savedPhotosAlbum
+        imagePicker.sourceType = .camera
         imagePicker.cameraFlashMode = .off
-        imagePicker.cameraCaptureMode = .photo
+        imagePicker.allowsEditing = true
+        
+        imagePicker.delegate = self
+        
+        present(imagePicker,
+                animated: true)
+    }
+    
+    private func openVideo() {
+        let imagePicker = UIImagePickerController()
+        imagePicker.sourceType = .camera
+        imagePicker.mediaTypes = [kUTTypeMovie as String]
+        imagePicker.cameraFlashMode = .off
+        imagePicker.cameraCaptureMode = .video
+        imagePicker.videoQuality = .typeMedium
+        imagePicker.videoMaximumDuration = TimeInterval(5)
         imagePicker.allowsEditing = true
         
         imagePicker.delegate = self
@@ -131,9 +149,24 @@ public class CreateTweetViewController: UIViewController, UINavigationController
 extension CreateTweetViewController: UIImagePickerControllerDelegate {
     public func imagePickerController(_ picker: UIImagePickerController,
                                       didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        guard let view = view as? CreateTweetView,
-              let image = info[.originalImage] as? UIImage else { return }
+        picker.dismiss(animated: true)
         
-        view.setupImage(image: image)
+        guard let view = view as? CreateTweetView else { return }
+        
+        if let image = info[.originalImage] as? UIImage {
+            view.setupImage(image: image)
+        }
+        
+        if let videoURL = info[.mediaURL] as? URL {
+            let avPlayer = AVPlayer(url: videoURL.absoluteURL)
+            let playerVC = AVPlayerViewController()
+            
+            playerVC.player = avPlayer
+            
+            present(playerVC,
+                    animated: true) {
+                playerVC.player?.play()
+            }
+        }
     }
 }

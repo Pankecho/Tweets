@@ -6,6 +6,10 @@
 	<string>Grant access to camera, to add pictures into your tweets</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Grant access to your photos</string>
+	<key>NSAppleMusicUsageDescription</key>
+	<string>Grant access to your photos</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Grant access to your microphone</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
