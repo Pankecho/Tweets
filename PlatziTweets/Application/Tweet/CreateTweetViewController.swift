@@ -4,7 +4,7 @@ import RxSwift
 import NotificationBannerSwift
 import JGProgressHUD
 
-public class CreateTweetViewController: UIViewController {
+public class CreateTweetViewController: UIViewController, UINavigationControllerDelegate {
     private let disposeBag = DisposeBag()
     
     public init() {
@@ -32,6 +32,10 @@ public class CreateTweetViewController: UIViewController {
         }
         .disposed(by: disposeBag)
         
+        view.addImageButton.rx.tap.bind { [weak self] in
+            self?.openCamera()
+        }
+        .disposed(by: disposeBag)
         
         view.saveButton.rx.tap.bind {
             guard let text = view.contentTextView.text else { return }
@@ -49,7 +53,7 @@ public class CreateTweetViewController: UIViewController {
                 hud.dismiss()
                 
                 switch response {
-                case .success(let post):
+                case .success(_):
                     self?.dismiss(animated: true)
                     
                 case .error(let error):
@@ -67,5 +71,30 @@ public class CreateTweetViewController: UIViewController {
             }
         }
         .disposed(by: disposeBag)
+    }
+    
+    private func openCamera() {
+        let imagePicker = UIImagePickerController()
+        imagePicker.sourceType = .camera
+        imagePicker.cameraFlashMode = .off
+        imagePicker.cameraCaptureMode = .photo
+        imagePicker.allowsEditing = true
+        
+        imagePicker.delegate = self
+        
+        imagePicker.
+        
+        present(imagePicker,
+                animated: true)
+    }
+}
+
+extension CreateTweetViewController: UIImagePickerControllerDelegate {
+    public func imagePickerController(_ picker: UIImagePickerController,
+                                      didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        guard let view = view as? CreateTweetView,
+              let image = info[.originalImage] as? UIImage else { return }
+        
+        view.setupImage(image: image)
     }
 }

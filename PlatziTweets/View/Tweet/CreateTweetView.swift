@@ -7,6 +7,9 @@ public class CreateTweetView: UIView {
     public let closeButton = UIButton()
     public let contentTextView = UITextView()
     public let saveButton = UIButton()
+    public let contentImageView = UIImageView()
+    public let addImageButton = UIButton()
+    
     private let backgroundImageView = UIImageView()
     
     init() {
@@ -36,10 +39,18 @@ public class CreateTweetView: UIView {
                                  for: .normal)
         saveButton.setCornerRadius(25)
         
+        contentImageView.setCornerRadius(12)
+        contentImageView.contentMode = .scaleAspectFit
+        
+        addImageButton.setImage(UIImage(systemName: "camera.fill"),
+                             for: .normal)
+        addImageButton.tintColor = .blue
+        
         backgroundImageView.contentMode = .scaleAspectFill
         backgroundImageView.image = UIImage(named: "cityBackground")
         
         backgroundColor = .white
+        contentImageView.isHidden = true
     }
     
     private func layout() {
@@ -57,9 +68,24 @@ public class CreateTweetView: UIView {
         saveButton.autoSetDimension(.height,
                                     toSize: 50)
         
+        contentImageView.autoSetDimension(.height,
+                                          toSize: 200)
+        
+        addImageButton.autoSetDimensions(to: CGSize(width: 50,
+                                                    height: 50))
+        
+        let mediaStackView = UIStackView(arrangedSubviews: [
+            addImageButton
+        ])
+        
+        mediaStackView.axis = .horizontal
+        mediaStackView.spacing = 20
+        
         let mainStackView = UIStackView(arrangedSubviews: [
             titleStackView,
             contentTextView,
+            contentImageView,
+            mediaStackView,
             saveButton,
         ])
         
@@ -80,5 +106,12 @@ public class CreateTweetView: UIView {
         backgroundImageView.autoPinEdge(toSuperviewEdge: .bottom)
         backgroundImageView.autoPinEdge(toSuperviewEdge: .left)
         backgroundImageView.autoPinEdge(toSuperviewEdge: .right)
+    }
+    
+    public func setupImage(image: UIImage?) {
+        if let image = image {
+            contentImageView.isHidden = false
+            contentImageView.image = image
+        }
     }
 }

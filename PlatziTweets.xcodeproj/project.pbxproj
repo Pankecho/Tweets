@@ -27,6 +27,7 @@
 		CB2183872722764400FBC792 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2183862722764400FBC792 /* HomeViewController.swift */; };
 		CB21838A27227A2600FBC792 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB21838927227A2600FBC792 /* HomeView.swift */; };
 		CB21838E27227B6600FBC792 /* TweetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB21838D27227B6600FBC792 /* TweetTableViewCell.swift */; };
+		CB219CD127335B2000E47596 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB219CD027335B2000E47596 /* GoogleService-Info.plist */; };
 		CB6E3BCA2732076B007D3F69 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = CB6E3BC92732076B007D3F69 /* Kingfisher */; };
 		CB6E3BCE273213D8007D3F69 /* CreateTweetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6E3BCD273213D8007D3F69 /* CreateTweetView.swift */; };
 		CB6E3BD327321B36007D3F69 /* CreateTweetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6E3BD227321B36007D3F69 /* CreateTweetViewController.swift */; };
@@ -77,6 +78,7 @@
 		CB2183862722764400FBC792 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		CB21838927227A2600FBC792 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		CB21838D27227B6600FBC792 /* TweetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetTableViewCell.swift; sourceTree = "<group>"; };
+		CB219CD027335B2000E47596 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CB6E3BCD273213D8007D3F69 /* CreateTweetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTweetView.swift; sourceTree = "<group>"; };
 		CB6E3BD227321B36007D3F69 /* CreateTweetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTweetViewController.swift; sourceTree = "<group>"; };
 		CB8F5B9B272A291B0078AA61 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
@@ -215,6 +217,7 @@
 				CB958A9126ED4D1500BD71EF /* Assets.xcassets */,
 				CB958A9326ED4D1500BD71EF /* LaunchScreen.storyboard */,
 				CB958A9626ED4D1500BD71EF /* Info.plist */,
+				CB219CD027335B2000E47596 /* GoogleService-Info.plist */,
 			);
 			path = PlatziTweets;
 			sourceTree = "<group>";
@@ -405,6 +408,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB958A9526ED4D1500BD71EF /* LaunchScreen.storyboard in Resources */,
+				CB219CD127335B2000E47596 /* GoogleService-Info.plist in Resources */,
 				CB958A9226ED4D1500BD71EF /* Assets.xcassets in Resources */,
 				CB958A9026ED4D1400BD71EF /* Main.storyboard in Resources */,
 			);
