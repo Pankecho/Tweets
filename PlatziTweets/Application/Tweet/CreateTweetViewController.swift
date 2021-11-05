@@ -11,6 +11,8 @@ import MobileCoreServices
 public class CreateTweetViewController: UIViewController, UINavigationControllerDelegate {
     private let disposeBag = DisposeBag()
     
+    private var videoURL: URL?
+    
     public init() {
         super.init(nibName: nil,
                    bundle: nil)
@@ -37,14 +39,47 @@ public class CreateTweetViewController: UIViewController, UINavigationController
         .disposed(by: disposeBag)
         
         view.addImageButton.rx.tap.bind { [weak self] in
-            self?.openCamera()
+            self?.selectMedia()
+        }
+        .disposed(by: disposeBag)
+        
+        view.watchVideoButton.rx.tap.bind { [weak self] in
+            guard let self = self,
+                  let videoURL = self.videoURL else { return }
+            let avPlayer = AVPlayer(url: videoURL)
+            let playerVC = AVPlayerViewController()
+            
+            playerVC.player = avPlayer
+            
+            self.present(playerVC,
+                    animated: true) {
+                playerVC.player?.play()
+            }
         }
         .disposed(by: disposeBag)
         
         view.saveButton.rx.tap.bind { [weak self] in
-            self?.uploadImage(view: view)
+            self?.uploadVideo(view: view)
         }
         .disposed(by: disposeBag)
+    }
+    
+    private func selectMedia() {
+        let vc = UIAlertController(title: "Camera",
+                                   message: "Choose an option",
+                                   preferredStyle: .actionSheet)
+        
+        vc.addAction(UIAlertAction(title: "Photo",
+                                   style: .default, handler: { _ in self.openCamera() }))
+        
+        vc.addAction(UIAlertAction(title: "Video",
+                                   style: .default, handler: { _ in self.openVideo() }))
+        
+        vc.addAction(.init(title: "Cancel",
+                           style: .cancel))
+        
+        present(vc,
+                animated: true)
     }
     
     private func openCamera() {
@@ -75,7 +110,8 @@ public class CreateTweetViewController: UIViewController, UINavigationController
                 animated: true)
     }
     
-    private func uploadImage(view: CreateTweetView) {
+    private func uploadImage(view: CreateTweetView,
+                             videoURL: String? = nil) {
         if let image = view.contentImageView.image,
            let imageData = image.jpegData(compressionQuality: 0.1) {
             let metadata = StorageMetadata()
@@ -101,22 +137,60 @@ public class CreateTweetViewController: UIViewController, UINavigationController
                     DispatchQueue.main.async {
                         reference.downloadURL { [weak self] (url, err) in
                             self?.uploadTweet(view: view,
-                                             imageURL: url?.absoluteString)
+                                             imageURL: url?.absoluteString,
+                                             videoURL: videoURL)
                         }
                     }
                 }
             }
         }
-        uploadTweet(view: view)
+        uploadTweet(view: view,
+                    videoURL: videoURL)
+    }
+    
+    private func uploadVideo(view: CreateTweetView) {
+        if let videoURL = videoURL,
+           let videoData = try? Data(contentsOf: videoURL) {
+            let metadata = StorageMetadata()
+            metadata.contentType = "video/mp4"
+            
+            let storage = Storage.storage()
+            
+            let videoName = videoData.base64EncodedString()
+            
+            let reference = storage.reference(withPath: "platzi-tweets-video/\(videoName).mp4")
+            
+            DispatchQueue.global(qos: .background).async {
+                reference.putData(videoData,
+                                  metadata: metadata) { (_, error) in
+                    if let error = error {
+                        NotificationBanner(title: "Error",
+                                           subtitle: error.localizedDescription,
+                                           style: .danger)
+                            .show()
+                        return
+                    }
+                    
+                    DispatchQueue.main.async {
+                        reference.downloadURL { [weak self] (url, err) in
+                            self?.uploadImage(view: view,
+                                              videoURL: url?.absoluteString)
+                        }
+                    }
+                }
+            }
+        }
+        uploadImage(view: view)
     }
     
     private func uploadTweet(view: CreateTweetView,
-                             imageURL: String? = nil) {
+                             imageURL: String? = nil,
+                             videoURL: String? = nil) {
         guard let text = view.contentTextView.text else { return }
         
         let data = PostRequest(text: text,
                                imageURL: imageURL,
-                               videoURL: nil,
+                               videoURL: videoURL,
                                location: nil)
         
         let hud = JGProgressHUD()
@@ -158,15 +232,8 @@ extension CreateTweetViewController: UIImagePickerControllerDelegate {
         }
         
         if let videoURL = info[.mediaURL] as? URL {
-            let avPlayer = AVPlayer(url: videoURL.absoluteURL)
-            let playerVC = AVPlayerViewController()
-            
-            playerVC.player = avPlayer
-            
-            present(playerVC,
-                    animated: true) {
-                playerVC.player?.play()
-            }
+            self.videoURL = videoURL
+            view.setupVideo(value: true)
         }
     }
 }

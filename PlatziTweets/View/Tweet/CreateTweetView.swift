@@ -9,6 +9,8 @@ public class CreateTweetView: UIView {
     public let saveButton = UIButton()
     public let contentImageView = UIImageView()
     public let addImageButton = UIButton()
+    public let recordVideoButton = UIButton()
+    public let watchVideoButton = UIButton()
     
     private let backgroundImageView = UIImageView()
     
@@ -46,11 +48,31 @@ public class CreateTweetView: UIView {
                              for: .normal)
         addImageButton.tintColor = .blue
         
+        recordVideoButton.setImage(UIImage(systemName: "video.fill"),
+                             for: .normal)
+        recordVideoButton.tintColor = .blue
+        
+        watchVideoButton.tintColor = .systemGreen
+        watchVideoButton.contentHorizontalAlignment = .left
+        watchVideoButton.setTitle("Watch video",
+                                  for: .normal)
+        watchVideoButton.setTitleColor(.black,
+                                       for: .normal)
+        watchVideoButton.titleLabel?.font = .systemFont(ofSize: UIFont.systemFontSize,
+                                                        weight: .medium)
+        watchVideoButton.titleEdgeInsets = UIEdgeInsets(top: 0,
+                                                        left: 4,
+                                                        bottom: 0,
+                                                        right: 0)
+        watchVideoButton.setImage(UIImage(systemName: "video.fill"),
+                                  for: .normal)
+        
         backgroundImageView.contentMode = .scaleAspectFill
         backgroundImageView.image = UIImage(named: "cityBackground")
         
         backgroundColor = .white
         contentImageView.isHidden = true
+        watchVideoButton.isHidden = true
     }
     
     private func layout() {
@@ -68,14 +90,19 @@ public class CreateTweetView: UIView {
         saveButton.autoSetDimension(.height,
                                     toSize: 50)
         
+        
         contentImageView.autoSetDimension(.height,
                                           toSize: 200)
         
         addImageButton.autoSetDimensions(to: CGSize(width: 50,
                                                     height: 50))
         
+        recordVideoButton.autoSetDimensions(to: CGSize(width: 50,
+                                                       height: 50))
+        
         let mediaStackView = UIStackView(arrangedSubviews: [
-            addImageButton
+            addImageButton,
+            recordVideoButton
         ])
         
         mediaStackView.axis = .horizontal
@@ -85,6 +112,7 @@ public class CreateTweetView: UIView {
             titleStackView,
             contentTextView,
             contentImageView,
+            watchVideoButton,
             mediaStackView,
             saveButton,
         ])
@@ -112,6 +140,12 @@ public class CreateTweetView: UIView {
         if let image = image {
             contentImageView.isHidden = false
             contentImageView.image = image
+        }
+    }
+    
+    public func setupVideo(value: Bool) {
+        if value {
+            watchVideoButton.isHidden = false
         }
     }
 }
