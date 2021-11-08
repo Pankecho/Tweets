@@ -9,7 +9,6 @@ public class CreateTweetView: UIView {
     public let saveButton = UIButton()
     public let contentImageView = UIImageView()
     public let addImageButton = UIButton()
-    public let recordVideoButton = UIButton()
     public let watchVideoButton = UIButton()
     
     private let backgroundImageView = UIImageView()
@@ -31,7 +30,7 @@ public class CreateTweetView: UIView {
         closeButton.setImage(UIImage(systemName: "stop"),
                              for: .normal)
         
-        contentTextView.backgroundColor = UIColor.lightGray.withAlphaComponent(0.30)
+        contentTextView.backgroundColor = UIColor.lightGray.withAlphaComponent(0.10)
         contentTextView.setCornerRadius(12)
         
         saveButton.setTitle("Save",
@@ -46,11 +45,8 @@ public class CreateTweetView: UIView {
         
         addImageButton.setImage(UIImage(systemName: "camera.fill"),
                              for: .normal)
-        addImageButton.tintColor = .blue
-        
-        recordVideoButton.setImage(UIImage(systemName: "video.fill"),
-                             for: .normal)
-        recordVideoButton.tintColor = .blue
+        addImageButton.tintColor = .black
+        addImageButton.contentHorizontalAlignment = .left
         
         watchVideoButton.tintColor = .systemGreen
         watchVideoButton.contentHorizontalAlignment = .left
@@ -94,26 +90,21 @@ public class CreateTweetView: UIView {
         contentImageView.autoSetDimension(.height,
                                           toSize: 200)
         
-        addImageButton.autoSetDimensions(to: CGSize(width: 50,
-                                                    height: 50))
+        addImageButton.autoSetDimensions(to: CGSize(width: 32,
+                                                    height: 32))
         
-        recordVideoButton.autoSetDimensions(to: CGSize(width: 50,
-                                                       height: 50))
-        
-        let mediaStackView = UIStackView(arrangedSubviews: [
-            addImageButton,
-            recordVideoButton
+        let contentStackView = UIStackView(arrangedSubviews: [
+            contentTextView,
+            contentImageView,
+            addImageButton
         ])
         
-        mediaStackView.axis = .horizontal
-        mediaStackView.spacing = 20
+        contentStackView.axis = .vertical
+        contentStackView.spacing = 4
         
         let mainStackView = UIStackView(arrangedSubviews: [
             titleStackView,
-            contentTextView,
-            contentImageView,
-            watchVideoButton,
-            mediaStackView,
+            contentStackView,
             saveButton,
         ])
         
