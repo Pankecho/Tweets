@@ -9,7 +9,7 @@ public class TweetTableViewCell: UITableViewCell {
     private let userNameLabel = UILabel()
     private let tweetImageView = UIImageView()
     private let tweetContentTextView = UITextView()
-    private let watchVideoButton = UIButton()
+    public let watchVideoButton = UIButton()
     private let tweetDateLabel = UILabel()
     
     public override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -25,6 +25,9 @@ public class TweetTableViewCell: UITableViewCell {
     
     private func setup() {
         selectionStyle = .none
+        
+        tweetImageView.isHidden = true
+        watchVideoButton.isHidden = true
         
         userImageView.backgroundColor = .gray
         
@@ -117,12 +120,14 @@ public class TweetTableViewCell: UITableViewCell {
         tweetContentTextView.text = text
         tweetDateLabel.text = createdAt
         
-        if let videoURL = videoURL {
+        if let videoURL = videoURL,
+           !videoURL.isEmpty {
             // Todo
             watchVideoButton.isHidden = false
         }
         
-        if let imageURL = imageURL {
+        if let imageURL = imageURL,
+           !imageURL.isEmpty {
             tweetImageView.isHidden = false
             tweetImageView.kf.setImage(with: URL(string: imageURL))
         }

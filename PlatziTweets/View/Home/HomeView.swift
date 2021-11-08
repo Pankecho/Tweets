@@ -18,6 +18,7 @@ public class HomeView: UIView {
     private func setup() {
         tweetsTableView.register(TweetTableViewCell.self,
                                  forCellReuseIdentifier: "tweetCell")
+        tweetsTableView.allowsSelection = false
         
         createButton.backgroundColor = .black
         createButton.setTitleColor(.white,

@@ -4,6 +4,7 @@ import RxSwift
 import RxCocoa
 import NotificationBannerSwift
 import JGProgressHUD
+import AVKit
 
 public class HomeViewController: UIViewController {
     private let disposeBag = DisposeBag()
@@ -44,6 +45,22 @@ public class HomeViewController: UIViewController {
                        videoURL: item.videoUrl,
                        text: item.text,
                        createdAt: item.createdAt)
+            
+            cell.watchVideoButton.rx.tap.asObservable().bind { [weak self] _ in
+                guard let self = self,
+                      let videoURL = item.videoUrl,
+                      let url = URL(string: videoURL)  else { return }
+                let avPlayer = AVPlayer(url: url)
+                let playerVC = AVPlayerViewController()
+                
+                playerVC.player = avPlayer
+                
+                self.present(playerVC,
+                        animated: true) {
+                    playerVC.player?.play()
+                }
+            }
+            .disposed(by: self.disposeBag)
             
             return cell
         }
