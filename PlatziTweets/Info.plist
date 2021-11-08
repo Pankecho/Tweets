@@ -10,6 +10,12 @@
 	<string>Grant access to your photos</string>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>Grant access to your microphone</string>
+	<key>NSLocationUsageDescription</key>
+	<string>Grant access to your location</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Grant access to your location</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Grant access to your location</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>

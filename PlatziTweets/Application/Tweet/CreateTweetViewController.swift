@@ -7,11 +7,14 @@ import FirebaseStorage
 import AVFoundation
 import AVKit
 import MobileCoreServices
+import CoreLocation
 
 public class CreateTweetViewController: UIViewController, UINavigationControllerDelegate {
     private let disposeBag = DisposeBag()
     
     private var videoURL: URL?
+    
+    private var userLocation: CLLocation?
     
     public init() {
         super.init(nibName: nil,
@@ -30,6 +33,7 @@ public class CreateTweetViewController: UIViewController, UINavigationController
 
     public override func viewDidLoad() {
         super.viewDidLoad()
+        requestLocation()
     }
     
     private func bind(view: CreateTweetView) {
@@ -188,10 +192,17 @@ public class CreateTweetViewController: UIViewController, UINavigationController
                              videoURL: String? = nil) {
         guard let text = view.contentTextView.text else { return }
         
+        var location: PostLocationRequest?
+        
+        if let userLocation = userLocation {
+            location = PostLocationRequest(latitude: userLocation.coordinate.latitude,
+                                           longitude: userLocation.coordinate.longitude)
+        }
+        
         let data = PostRequest(text: text,
                                imageURL: imageURL,
                                videoURL: videoURL,
-                               location: nil)
+                               location: location)
         
         let hud = JGProgressHUD()
         hud.show(in: view)
@@ -217,6 +228,24 @@ public class CreateTweetViewController: UIViewController, UINavigationController
                     .show()
             }
         }
+    }
+    
+    private func requestLocation() {
+        guard CLLocationManager.locationServicesEnabled() else { return }
+        
+        let locationManager = CLLocationManager()
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestAlwaysAuthorization()
+        locationManager.startUpdatingLocation()
+    }
+}
+
+extension CreateTweetViewController: CLLocationManagerDelegate {
+    public func locationManager(_ manager: CLLocationManager,
+                                didUpdateLocations locations: [CLLocation]) {
+        guard let lastLocation = locations.last else { return }
+        userLocation = lastLocation
     }
 }
 
