@@ -5,10 +5,12 @@ import RxCocoa
 import NotificationBannerSwift
 import JGProgressHUD
 import AVKit
+import CoreLocation
 
 public class HomeViewController: UIViewController {
     private let disposeBag = DisposeBag()
     private let items = PublishSubject<[Post]>()
+    private var posts: [Post] = []
     
     public init() {
         super.init(nibName: nil,
@@ -33,6 +35,10 @@ public class HomeViewController: UIViewController {
     
     private func bind(view: HomeView) {
         navigationItem.title = "Tweets"
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .search,
+                                                            target: self,
+                                                            action: #selector(showMapView))
         
         items.asObservable().bind(to: view.tweetsTableView.rx.items) { tableView, row, item in
             let cell: TweetTableViewCell = tableView
@@ -81,6 +87,7 @@ public class HomeViewController: UIViewController {
             hud.dismiss()
             switch response {
             case .success(let posts):
+                self?.posts = posts
                 self?.items.onNext(posts)
 
             case .error(let error):
@@ -100,5 +107,11 @@ public class HomeViewController: UIViewController {
     
     // Todo delete
     private func deletePost(at indexPath: IndexPath) {
+    }
+    
+    @objc private func showMapView() {
+        let vc = TweetsMapViewController(posts: posts)
+        navigationController?.pushViewController(vc,
+                                                 animated: true)
     }
 }

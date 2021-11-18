@@ -192,11 +192,11 @@ public class CreateTweetViewController: UIViewController, UINavigationController
                              videoURL: String? = nil) {
         guard let text = view.contentTextView.text else { return }
         
-        var location: PostLocationRequest?
+        var location: Location?
         
         if let userLocation = userLocation {
-            location = PostLocationRequest(latitude: userLocation.coordinate.latitude,
-                                           longitude: userLocation.coordinate.longitude)
+            location = Location(latitude: userLocation.coordinate.latitude,
+                                longitude: userLocation.coordinate.longitude)
         }
         
         let data = PostRequest(text: text,

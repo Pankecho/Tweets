@@ -31,6 +31,8 @@
 		CB219CD527335C3A00E47596 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = CB219CD427335C3A00E47596 /* FirebaseAnalytics */; };
 		CB219CD727335C3A00E47596 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = CB219CD627335C3A00E47596 /* FirebaseStorage */; };
 		CB219CD927335C3A00E47596 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = CB219CD827335C3A00E47596 /* FirebaseCrashlytics */; };
+		CB219CDC2739E75F00E47596 /* TweetsMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB219CDB2739E75F00E47596 /* TweetsMapViewController.swift */; };
+		CB219CDF2739E7A200E47596 /* TweetsMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB219CDE2739E7A200E47596 /* TweetsMapView.swift */; };
 		CB6E3BCA2732076B007D3F69 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = CB6E3BC92732076B007D3F69 /* Kingfisher */; };
 		CB6E3BCE273213D8007D3F69 /* CreateTweetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6E3BCD273213D8007D3F69 /* CreateTweetView.swift */; };
 		CB6E3BD327321B36007D3F69 /* CreateTweetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6E3BD227321B36007D3F69 /* CreateTweetViewController.swift */; };
@@ -82,6 +84,8 @@
 		CB21838927227A2600FBC792 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		CB21838D27227B6600FBC792 /* TweetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetTableViewCell.swift; sourceTree = "<group>"; };
 		CB219CD027335B2000E47596 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CB219CDB2739E75F00E47596 /* TweetsMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetsMapViewController.swift; sourceTree = "<group>"; };
+		CB219CDE2739E7A200E47596 /* TweetsMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetsMapView.swift; sourceTree = "<group>"; };
 		CB6E3BCD273213D8007D3F69 /* CreateTweetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTweetView.swift; sourceTree = "<group>"; };
 		CB6E3BD227321B36007D3F69 /* CreateTweetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTweetViewController.swift; sourceTree = "<group>"; };
 		CB8F5B9B272A291B0078AA61 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
@@ -263,6 +267,7 @@
 			isa = PBXGroup;
 			children = (
 				CB2183862722764400FBC792 /* HomeViewController.swift */,
+				CB219CDB2739E75F00E47596 /* TweetsMapViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -321,6 +326,7 @@
 			children = (
 				CB21838927227A2600FBC792 /* HomeView.swift */,
 				CB21838D27227B6600FBC792 /* TweetTableViewCell.swift */,
+				CB219CDE2739E7A200E47596 /* TweetsMapView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -432,11 +438,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB958AC126EEC7FD00BD71EF /* SignupViewController.swift in Sources */,
+				CB219CDC2739E75F00E47596 /* TweetsMapViewController.swift in Sources */,
 				CB21838E27227B6600FBC792 /* TweetTableViewCell.swift in Sources */,
 				CB218379272274F100FBC792 /* SN+PutMethods.swift in Sources */,
 				CB21837C272274F100FBC792 /* ResultBlocks.swift in Sources */,
 				CB21837A272274F100FBC792 /* SN.swift in Sources */,
 				CB958AB826EEC47200BD71EF /* SignupView.swift in Sources */,
+				CB219CDF2739E7A200E47596 /* TweetsMapView.swift in Sources */,
 				CB21837F272274F100FBC792 /* SSLConfig.swift in Sources */,
 				CB218375272274F100FBC792 /* SN+DeleteMethods.swift in Sources */,
 				CB218377272274F100FBC792 /* Encodable+Extensions.swift in Sources */,
